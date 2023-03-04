@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>BackGround-color <span id="sp"></span></h1>
+    <button id="btn">Click me</button>
+    <script>
+        let a1=Math.floor(Math.random()*255);
+        let a2=Math.floor(Math.random()*255);
+        let a3=Math.floor(Math.random()*255);
+
+        let a=document.getElementById('btn');
+        a.addEventListener("mouseover",function(){
+        console.log("hello world")
+        document.body.style.background=`rgb(${a1},${a2},${a3})`;
+        document.getElementById('sp').innerHTML=`rgb(${a1},${a2},${a3})`;
+            setTimeout(()=>{
+                location.reload(true);
+            },5000);
+       })
+    </script>
+</body>
+</html>
